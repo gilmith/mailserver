@@ -1,6 +1,5 @@
 package com.jacobo.adyd.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -14,9 +13,10 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Service
+@RequiredArgsConstructor
 public class MailServiceImpl implements MailService{
-	@Autowired
-	private JavaMailSender sender;
+	
+	private final JavaMailSender sender;
 	
 	@Value("${spring.mail.username}")
 	private String de;

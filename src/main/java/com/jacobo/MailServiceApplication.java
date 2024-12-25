@@ -10,7 +10,6 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 @AutoConfiguration
 @SpringBootApplication
 @RefreshScope
-@EnableDiscoveryClient
 public class MailServiceApplication {
 
 	public static void main(String[] args) {

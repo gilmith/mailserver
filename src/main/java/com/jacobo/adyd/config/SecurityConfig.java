@@ -22,11 +22,7 @@ public class SecurityConfig {
 		http.csrf((csrf) -> {
 			csrf.disable();
 		});
-		http.authorizeHttpRequests(
-				(authorizeHttpRequests) -> 
-						authorizeHttpRequests
-						.requestMatchers(HttpMethod.POST, "/mail").permitAll()						
-		);
+
 		return http.build();
 
 	}

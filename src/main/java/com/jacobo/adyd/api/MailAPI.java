@@ -11,7 +11,7 @@ import org.springframework.http.ResponseEntity;
 
 public interface MailAPI {
 	
-	@PostMapping(path = "/mail", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+	@PostMapping(path = "/send", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<ResponseMail> sendMailRegister(@RequestBody MailInput input);
 	
 
